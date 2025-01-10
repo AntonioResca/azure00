@@ -21,4 +21,6 @@ git clone <URL_REPO_PRIMO> ~/django-projects/primo
 
 git clone <URL_REPO_SECONDO> ~/django-projects/secondo
 
+ogni repository deve contenere una copia del Dockerfile (che ovviamente può essere modificato)
 
+copia nella directory principale (~/django-projects) il file docker-compose.yml
