@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  primo:
+    build:
+      context: ./primo
+    container_name: primo_django
+    ports:
+      - "8001:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=primo.settings
+    volumes:
+      - ./primo:/app
+
+  secondo:
+    build:
+      context: ./secondo
+    container_name: secondo_django
+    ports:
+      - "8002:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=secondo.settings
+    volumes:
+      - ./secondo:/app
