@@ -24,3 +24,23 @@ git clone <URL_REPO_SECONDO> ~/django-projects/secondo
 ogni repository deve contenere una copia del Dockerfile (che ovviamente può essere modificato)
 
 copia nella directory principale (~/django-projects) il file docker-compose.yml
+
+ora modifica la configurazione di apache
+
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+aggiungendo in fondo:
+
+<VirtualHost *:80>
+    ServerName yourdomain.com
+
+    ProxyPass /primo http://127.0.0.1:8001/
+    ProxyPassReverse /primo http://127.0.0.1:8001/
+
+    ProxyPass /secondo http://127.0.0.1:8002/
+    ProxyPassReverse /secondo http://127.0.0.1:8002/
+</VirtualHost>
+
+infine
+
+sudo service apache2 restart
