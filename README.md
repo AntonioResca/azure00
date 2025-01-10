@@ -4,8 +4,9 @@
 per installare:
 
 cd
-sudo apt install unzip
-wget https://github.com/AntonioResca/azure00/archive/refs/heads/main.zip
-unzip main.zip
-cd azure00-main/
+
+git clone https://github.com/AntonioResca/azure00.git
+
+cd azure00
+
 source install.sh
