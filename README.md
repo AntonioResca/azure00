@@ -31,15 +31,15 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 
 aggiungendo in fondo:
 
-<VirtualHost *:80>
-    ServerName yourdomain.com
+    <VirtualHost *:80>
+        ServerName yourdomain.com
 
-    ProxyPass /primo http://127.0.0.1:8001/
-    ProxyPassReverse /primo http://127.0.0.1:8001/
+        ProxyPass /primo http://127.0.0.1:8001/
+        ProxyPassReverse /primo http://127.0.0.1:8001/
 
-    ProxyPass /secondo http://127.0.0.1:8002/
-    ProxyPassReverse /secondo http://127.0.0.1:8002/
-</VirtualHost>
+        ProxyPass /secondo http://127.0.0.1:8002/
+        ProxyPassReverse /secondo http://127.0.0.1:8002/
+    </VirtualHost>
 
 riavvia per rendere effettiva la nuova configurazione
 
