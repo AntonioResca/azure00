@@ -11,6 +11,7 @@ services:
       - DJANGO_SETTINGS_MODULE=primo.settings
     volumes:
       - ./primo:/app
+    restart: always
 
   secondo:
     build:
@@ -22,3 +23,4 @@ services:
       - DJANGO_SETTINGS_MODULE=secondo.settings
     volumes:
       - ./secondo:/app
+    restart: always
