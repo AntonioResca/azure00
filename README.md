@@ -41,6 +41,12 @@ aggiungendo in fondo:
     ProxyPassReverse /secondo http://127.0.0.1:8002/
 </VirtualHost>
 
-infine
+riavvia per rendere effettiva la nuova configurazione
 
 sudo service apache2 restart
+
+fai partire i container:
+
+cd ~/django-projects
+
+docker-compose up -d
